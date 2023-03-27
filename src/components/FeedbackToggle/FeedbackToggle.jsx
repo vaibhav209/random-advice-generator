@@ -2,15 +2,16 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
+import Toast from 'react-bootstrap/Toast';
 
 const FeedbackToggle = () => {
   const [show, setShow] = useState(false);
-  const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [showToast, setShowToast] = useState(false);
   const [email, setEmail] = useState('');
 
   const handleClose = () => {
     setShow(false);
-    setSubmitSuccess(false);
+    setShowToast(false);
   };
 
   const handleShow = () => {
@@ -21,8 +22,9 @@ const FeedbackToggle = () => {
     // Validate email address
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (emailRegex.test(email)) {
-      setSubmitSuccess(true);
       setShow(false);
+      setShowToast(true);
+      setTimeout(() => setShowToast(false), 3000); 
     } else {
       alert('Please enter a valid email address.');
     }
@@ -39,11 +41,6 @@ const FeedbackToggle = () => {
           Share Feedback
         </Button>
       </div>
-      {submitSuccess && (
-        <div style={{ textAlign: 'center', marginTop: '10%' }}>
-          <h4>Thank You!</h4>
-        </div>
-      )}
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>User Feedback</Modal.Title>
@@ -78,6 +75,23 @@ const FeedbackToggle = () => {
           </Button>
         </Modal.Footer>
       </Modal>
+      <Toast
+        show={showToast}
+        onClose={() => setShowToast(false)}
+        delay={3000}
+        autohide
+        style={{
+          position: 'fixed',
+          bottom: 20,
+          left: 20,
+          zIndex: 1,
+          backgroundColor:'#42ba96',
+          fontWeight:'600',
+          color:'white'
+        }}
+      >
+        <Toast.Body>Your feedback has been submitted. Thank you!</Toast.Body>
+      </Toast>
     </>
   );
 };
