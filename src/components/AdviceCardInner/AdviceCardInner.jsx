@@ -2,7 +2,6 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import AdviceButton from '../AdviceButton/AdviceButton';
 import Loader from '../Loader/Loader';
-import SwitchToggle from '../SwitchToggle/SwitchToggle';
 import styles from './AdviceCardInner.module.css';
 
 
@@ -11,7 +10,7 @@ const AdviceCardInner = ({
   isLoading,
   isError,
   WelcmMsg,
-  getData,
+  getData
 }) => {
 
 
