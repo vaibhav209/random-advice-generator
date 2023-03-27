@@ -13,7 +13,7 @@
 
 ## Description
 
-This is a simple React app that generates random pieces of advice using an API. Every time you click the "Get Advice" button, the app fetches a new piece of advice and displays it on the screen.
+This is a simple React app that generates random pieces of advice using an API. Every time you click the "NEXT" button, the app fetches a new piece of advice and displays it on the screen.
 
 
 ## Installation
