@@ -65,7 +65,7 @@ const FeedbackToggle = () => {
               controlId="exampleForm.ControlTextarea1"
             >
               <Form.Label>Write Comment</Form.Label>
-              <Form.Control as="textarea" rows={3} />
+              <Form.Control as="textarea" rows={3} placeholder="Write Comment" />
             </Form.Group>
           </Form>
         </Modal.Body>
