@@ -1,0 +1,24 @@
+.subCard {
+  width: 50%;
+  height: 70%;
+  margin-top: 10%;
+  color: black;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.noneStyle {
+  display: none;
+}
+.blockStyle {
+  display: block;
+  font-size: 30px;
+  font-weight: 100;
+}
+
+.welcmText {
+  font-size: 27px;
+  font-weight: 100;
+  font-family: 'Montserrat';
+  color: #ff9900;
+}
