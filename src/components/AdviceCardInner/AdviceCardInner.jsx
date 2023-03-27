@@ -5,6 +5,7 @@ import Loader from '../Loader/Loader';
 import styles from './AdviceCardInner.module.css';
 
 
+
 const AdviceCardInner = ({
   advice,
   isLoading,
