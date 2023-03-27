@@ -37,7 +37,7 @@ const FeedbackToggle = () => {
   return (
     <>
       <div style={{ position: 'absolute', left: '2%', bottom: '2%' }}>
-        <Button variant="info" onClick={handleShow}>
+        <Button variant="info" onClick={handleShow} style={{color:'white'}} >
           Share Feedback
         </Button>
       </div>
